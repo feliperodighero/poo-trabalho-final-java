@@ -1,0 +1,6 @@
+1
+hamburguer
+2
+coca
+2
+200.0
