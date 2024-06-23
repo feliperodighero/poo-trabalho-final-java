@@ -107,7 +107,7 @@ public class CadastroEstagiario extends javax.swing.JFrame {
         System.out.println("Telefone: " + telefone);
         System.out.println("Registro: " + registro);
         System.out.println("Salário: " + salario);
-        System.out.println("Bolsa: " + bolsa);
+        System.out.println("Bolsa: (1 = SIM   0 = NÃO)" + bolsa);
         System.out.println("Horas de Servico: " + horasServico);
 
         Estagiario estagiario = new Estagiario(bolsa, horasServico, nome, idade, endereco, sexo, altura, telefone, registro, salario);

@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JInternalFrame.java to edit this template
- */
 package view;
 
 import java.awt.GridLayout;
@@ -11,10 +7,7 @@ import javax.swing.JPanel;
 import model.Funcionario;
 import model.Pedido;
 
-/**
- *
- * @author fezar
- */
+
 public class Restaurante extends javax.swing.JInternalFrame {
 
     /**
@@ -34,16 +27,24 @@ public class Restaurante extends javax.swing.JInternalFrame {
     private void initComponents() {
 
         jButton3 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        PanelOpcoes = new javax.swing.JPanel();
+        labelSiriCascudo = new javax.swing.JLabel();
         botaoRealizarPedido = new javax.swing.JButton();
         botaoExcluirPedido = new javax.swing.JButton();
         botaoVisualizarPedido = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
 
         jButton3.setText("jButton3");
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        jLabel1.setText("SIRI CASCUDO");
+        PanelOpcoes.setBackground(new java.awt.Color(0, 0, 0));
 
+        labelSiriCascudo.setBackground(new java.awt.Color(0, 0, 0));
+        labelSiriCascudo.setFont(new java.awt.Font("Segoe UI Black", 1, 36)); // NOI18N
+        labelSiriCascudo.setForeground(new java.awt.Color(255, 102, 51));
+        labelSiriCascudo.setText("SIRI CASCUDO");
+
+        botaoRealizarPedido.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
         botaoRealizarPedido.setText("Realizar Pedido");
         botaoRealizarPedido.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -51,6 +52,7 @@ public class Restaurante extends javax.swing.JInternalFrame {
             }
         });
 
+        botaoExcluirPedido.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
         botaoExcluirPedido.setText("Excluir Pedido");
         botaoExcluirPedido.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -58,6 +60,7 @@ public class Restaurante extends javax.swing.JInternalFrame {
             }
         });
 
+        botaoVisualizarPedido.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
         botaoVisualizarPedido.setText("Visualizar Pedido");
         botaoVisualizarPedido.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -65,59 +68,78 @@ public class Restaurante extends javax.swing.JInternalFrame {
             }
         });
 
+        jPanel1.setBackground(new java.awt.Color(0, 0, 0));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/MENU.png"))); // NOI18N
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 314, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 372, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 52, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout PanelOpcoesLayout = new javax.swing.GroupLayout(PanelOpcoes);
+        PanelOpcoes.setLayout(PanelOpcoesLayout);
+        PanelOpcoesLayout.setHorizontalGroup(
+            PanelOpcoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelOpcoesLayout.createSequentialGroup()
+                .addGap(36, 36, 36)
+                .addGroup(PanelOpcoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(labelSiriCascudo)
+                    .addGroup(PanelOpcoesLayout.createSequentialGroup()
+                        .addGap(24, 24, 24)
+                        .addGroup(PanelOpcoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(botaoRealizarPedido, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(botaoVisualizarPedido, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(botaoExcluirPedido, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        PanelOpcoesLayout.setVerticalGroup(
+            PanelOpcoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelOpcoesLayout.createSequentialGroup()
+                .addGroup(PanelOpcoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(PanelOpcoesLayout.createSequentialGroup()
+                        .addGap(24, 24, 24)
+                        .addComponent(labelSiriCascudo)
+                        .addGap(35, 35, 35)
+                        .addComponent(botaoRealizarPedido, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(botaoVisualizarPedido, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(12, 12, 12)
+                        .addComponent(botaoExcluirPedido, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(PanelOpcoesLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap(93, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addGap(74, 74, 74))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(botaoVisualizarPedido, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(botaoExcluirPedido, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(botaoRealizarPedido, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(136, 136, 136))))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(PanelOpcoes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(17, 17, 17)
-                .addComponent(jLabel1)
-                .addGap(42, 42, 42)
-                .addComponent(botaoRealizarPedido)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(botaoVisualizarPedido)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(botaoExcluirPedido)
-                .addContainerGap(106, Short.MAX_VALUE))
+            .addComponent(PanelOpcoes, javax.swing.GroupLayout.PREFERRED_SIZE, 376, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void botaoRealizarPedidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoRealizarPedidoActionPerformed
-        int numeroMesa = Integer.parseInt(JOptionPane.showInputDialog("Numero da mesa: "));
-        String nomeComida = JOptionPane.showInputDialog("Nome do lanche:");
-        int quantidadeComida = Integer.parseInt(JOptionPane.showInputDialog("Quantidade (Lanche):"));
-        String nomeBebida = JOptionPane.showInputDialog("Nome da bebida:");
-        int quantidadeBebida = Integer.parseInt(JOptionPane.showInputDialog("Quantidade (Bebida):"));
-        float valorTotal = Float.parseFloat(JOptionPane.showInputDialog("Valor total: "));
-        
-        Pedido pedido = new Pedido(numeroMesa, nomeComida, quantidadeComida, nomeBebida, quantidadeBebida, valorTotal);
-        model.CadastroPedido.salvarPedido(pedido);
-        
-        JOptionPane.showMessageDialog(this, "Pedido cadastrado com sucesso!");
-    }//GEN-LAST:event_botaoRealizarPedidoActionPerformed
-
-    private void botaoExcluirPedidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoExcluirPedidoActionPerformed
-        String numero = JOptionPane.showInputDialog("Informe o numero da mesa para excluir o pedido: ");
-        model.CadastroFuncionario.excluirCadastro(numero);
-        JOptionPane.showMessageDialog(this, "Cadastro excluído com sucesso!");
-    }//GEN-LAST:event_botaoExcluirPedidoActionPerformed
 
     private void botaoVisualizarPedidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoVisualizarPedidoActionPerformed
         String numeroMesa = JOptionPane.showInputDialog("Informe o numero da mesa: ");
@@ -144,7 +166,6 @@ public class Restaurante extends javax.swing.JInternalFrame {
             panel.add(new JLabel("Valor Total:"));
             panel.add(new JLabel(String.valueOf(pedido.getPrecoTotal())));
 
-
             // Mostrar o JOptionPane com o JPanel personalizado
             JOptionPane.showMessageDialog(this, panel, "Pedido da mesa", JOptionPane.INFORMATION_MESSAGE);
         } else {
@@ -152,12 +173,37 @@ public class Restaurante extends javax.swing.JInternalFrame {
         }
     }//GEN-LAST:event_botaoVisualizarPedidoActionPerformed
 
+    private void botaoExcluirPedidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoExcluirPedidoActionPerformed
+        String numero = JOptionPane.showInputDialog("Informe o numero da mesa para excluir o pedido: ");
+        model.CadastroFuncionario.excluirCadastro(numero);
+        JOptionPane.showMessageDialog(this, "Cadastro excluído com sucesso!");
+    }//GEN-LAST:event_botaoExcluirPedidoActionPerformed
+
+    private void botaoRealizarPedidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoRealizarPedidoActionPerformed
+        int numeroMesa = Integer.parseInt(JOptionPane.showInputDialog("Numero da mesa: "));
+        String nomeComida = JOptionPane.showInputDialog("Nome do lanche:");
+        int quantidadeComida = Integer.parseInt(JOptionPane.showInputDialog("Quantidade (Lanche):"));
+        String nomeBebida = JOptionPane.showInputDialog("Nome da bebida:");
+        int quantidadeBebida = Integer.parseInt(JOptionPane.showInputDialog("Quantidade (Bebida):"));
+        float valorTotal = Float.parseFloat(JOptionPane.showInputDialog("Valor total: "));
+
+        Pedido pedido = new Pedido(numeroMesa, nomeComida, quantidadeComida, nomeBebida, quantidadeBebida, valorTotal);
+        model.CadastroPedido.salvarPedido(pedido);
+
+        JOptionPane.showMessageDialog(this, "Pedido cadastrado com sucesso!");
+    }//GEN-LAST:event_botaoRealizarPedidoActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel PanelOpcoes;
     private javax.swing.JButton botaoExcluirPedido;
     private javax.swing.JButton botaoRealizarPedido;
     private javax.swing.JButton botaoVisualizarPedido;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel labelSiriCascudo;
     // End of variables declaration//GEN-END:variables
+
+
 }
