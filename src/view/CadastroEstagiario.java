@@ -32,11 +32,20 @@ public class CadastroEstagiario extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        PanelOptions = new javax.swing.JPanel();
         botaoCadastrar = new javax.swing.JButton();
         botaoVisualizar = new javax.swing.JButton();
         botaoExcluir = new javax.swing.JButton();
+        PanelImg = new javax.swing.JPanel();
+        img = new javax.swing.JLabel();
+        btnClose = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(0, 0, 0));
+        setUndecorated(true);
+        setResizable(false);
+
+        PanelOptions.setBackground(new java.awt.Color(0, 0, 0));
 
         botaoCadastrar.setText("Cadastrar");
         botaoCadastrar.addActionListener(new java.awt.event.ActionListener() {
@@ -59,31 +68,83 @@ public class CadastroEstagiario extends javax.swing.JFrame {
             }
         });
 
+        javax.swing.GroupLayout PanelOptionsLayout = new javax.swing.GroupLayout(PanelOptions);
+        PanelOptions.setLayout(PanelOptionsLayout);
+        PanelOptionsLayout.setHorizontalGroup(
+            PanelOptionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelOptionsLayout.createSequentialGroup()
+                .addContainerGap(42, Short.MAX_VALUE)
+                .addGroup(PanelOptionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(botaoCadastrar)
+                    .addGroup(PanelOptionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(PanelOptionsLayout.createSequentialGroup()
+                            .addGap(6, 6, 6)
+                            .addComponent(botaoExcluir))
+                        .addComponent(botaoVisualizar)))
+                .addGap(30, 30, 30))
+        );
+        PanelOptionsLayout.setVerticalGroup(
+            PanelOptionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelOptionsLayout.createSequentialGroup()
+                .addGap(96, 96, 96)
+                .addComponent(botaoCadastrar)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(botaoVisualizar)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(botaoExcluir)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        PanelImg.setBackground(new java.awt.Color(0, 0, 0));
+
+        img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/EST.png"))); // NOI18N
+
+        btnClose.setFont(new java.awt.Font("Dialog", 1, 10)); // NOI18N
+        btnClose.setText("X");
+        btnClose.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCloseActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout PanelImgLayout = new javax.swing.GroupLayout(PanelImg);
+        PanelImg.setLayout(PanelImgLayout);
+        PanelImgLayout.setHorizontalGroup(
+            PanelImgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelImgLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(img))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelImgLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnClose, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        PanelImgLayout.setVerticalGroup(
+            PanelImgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelImgLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(btnClose, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(img, javax.swing.GroupLayout.PREFERRED_SIZE, 333, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(65, 65, 65)
-                .addComponent(botaoCadastrar)
-                .addGap(18, 18, 18)
-                .addComponent(botaoVisualizar)
-                .addGap(18, 18, 18)
-                .addComponent(botaoExcluir)
-                .addContainerGap(68, Short.MAX_VALUE))
+                .addComponent(PanelOptions, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(PanelImg, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(127, 127, 127)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(botaoVisualizar)
-                    .addComponent(botaoExcluir)
-                    .addComponent(botaoCadastrar))
-                .addContainerGap(150, Short.MAX_VALUE))
+            .addComponent(PanelImg, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(PanelOptions, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void botaoCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoCadastrarActionPerformed
@@ -169,6 +230,10 @@ public class CadastroEstagiario extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(this, "Cadastro excluído com sucesso!");
     }//GEN-LAST:event_botaoExcluirActionPerformed
 
+    private void btnCloseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCloseActionPerformed
+        dispose();
+    }//GEN-LAST:event_btnCloseActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -205,8 +270,12 @@ public class CadastroEstagiario extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel PanelImg;
+    private javax.swing.JPanel PanelOptions;
     private javax.swing.JButton botaoCadastrar;
     private javax.swing.JButton botaoExcluir;
     private javax.swing.JButton botaoVisualizar;
+    private javax.swing.JButton btnClose;
+    private javax.swing.JLabel img;
     // End of variables declaration//GEN-END:variables
 }

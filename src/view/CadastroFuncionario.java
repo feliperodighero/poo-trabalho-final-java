@@ -99,32 +99,6 @@ public class CadastroFuncionario extends javax.swing.JInternalFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void botaoCadastrar(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoCadastrar
-        String nome = JOptionPane.showInputDialog("Nome:");
-        int idade = Integer.parseInt(JOptionPane.showInputDialog("Idade:"));
-        String endereco = JOptionPane.showInputDialog("Endereço:");
-        char sexo = JOptionPane.showInputDialog("Sexo (M/F):").charAt(0);
-        float altura = Float.parseFloat(JOptionPane.showInputDialog("Altura:"));
-        String telefone = JOptionPane.showInputDialog("Telefone:");
-        String registro = JOptionPane.showInputDialog("Registro:");
-        float salario = Float.parseFloat(JOptionPane.showInputDialog("Salário:"));
-
-        // Verificação dos valores capturados
-        System.out.println("Nome: " + nome);
-        System.out.println("Idade: " + idade);
-        System.out.println("Endereço: " + endereco);
-        System.out.println("Sexo: " + sexo);
-        System.out.println("Altura: " + altura);
-        System.out.println("Telefone: " + telefone);
-        System.out.println("Registro: " + registro);
-        System.out.println("Salário: " + salario);
-
-        Funcionario funcionario = new Funcionario(nome, idade, endereco, sexo, altura, telefone, registro, salario);
-        model.CadastroFuncionario.salvarCadastro(funcionario);
-
-        JOptionPane.showMessageDialog(this, "Funcionário cadastrado com sucesso!");
-    }//GEN-LAST:event_botaoCadastrar
-
     private void botaoExcluir(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoExcluir
         String nome = JOptionPane.showInputDialog("Informe o nome do cadastro a excluir:");
         model.CadastroFuncionario.excluirCadastro(nome);
@@ -171,6 +145,32 @@ public class CadastroFuncionario extends javax.swing.JInternalFrame {
             JOptionPane.showMessageDialog(this, "Estagiário não encontrado.", "Erro", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_botaoVisualizar
+
+    private void botaoCadastrar(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoCadastrar
+        String nome = JOptionPane.showInputDialog("Nome:");
+        int idade = Integer.parseInt(JOptionPane.showInputDialog("Idade:"));
+        String endereco = JOptionPane.showInputDialog("Endereço:");
+        char sexo = JOptionPane.showInputDialog("Sexo (M/F):").charAt(0);
+        float altura = Float.parseFloat(JOptionPane.showInputDialog("Altura:"));
+        String telefone = JOptionPane.showInputDialog("Telefone:");
+        String registro = JOptionPane.showInputDialog("Registro:");
+        float salario = Float.parseFloat(JOptionPane.showInputDialog("Salário:"));
+
+        // Verificação dos valores capturados
+        System.out.println("Nome: " + nome);
+        System.out.println("Idade: " + idade);
+        System.out.println("Endereço: " + endereco);
+        System.out.println("Sexo: " + sexo);
+        System.out.println("Altura: " + altura);
+        System.out.println("Telefone: " + telefone);
+        System.out.println("Registro: " + registro);
+        System.out.println("Salário: " + salario);
+
+        Funcionario funcionario = new Funcionario(nome, idade, endereco, sexo, altura, telefone, registro, salario);
+        model.CadastroFuncionario.salvarCadastro(funcionario);
+
+        JOptionPane.showMessageDialog(this, "Funcionário cadastrado com sucesso!");
+    }//GEN-LAST:event_botaoCadastrar
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
